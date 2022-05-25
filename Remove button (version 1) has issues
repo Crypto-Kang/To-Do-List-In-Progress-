@@ -1,0 +1,9 @@
+let removeTask = document.createElement('input');
+        removeTask.setAttribute('type', 'button');
+        removeTask.setAttribute("value", "Remove");
+        removeTask.setAttribute("id", "removeButton");
+        li.appendChild(removeTask);
+        
+        document.getElementById("removeButton").onclick = function(){
+            ul.removeChild(li)
+        };
