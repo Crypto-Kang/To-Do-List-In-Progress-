@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    
+    <input type="text" id="text">
+    <button id="button">Add to list</button>
+    <ul id="ul">
+    </ul>
+
+
+<script>
+// Function is called when button is clicked
+    document.getElementById("button").onclick = function(){
+        // Get text input box and define it as a variable
+        let text = document.getElementById("text");
+
+        // We need to create a "li" each time button is clicked, so new text isnt added to same bullet point
+        let li = document.createElement("li");
+
+        // We create text node using the input text box's value
+        let textNode = document.createTextNode(text.value);
+        
+        // Define "ul" as variable to append the "li" to bellow.
+        let ul = document.getElementById("ul");
+
+        ul.appendChild(li);
+        
+        // Append text node to the "li" that is created each time button is clicked
+        li.appendChild(textNode);
+    }
+</script>
+
+</body>
+</html>
