@@ -1,0 +1,91 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    padding: 2rem 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#new-task-form {
+    display: flex;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#inputField {
+    flex 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+}
+
+#inputField::placeholder {
+    color: var(--grey);
+    font-size:1.1rem ;
+}
+
+#addToDo {
+    color: var(--pink);
+	font-size: 2rem;
+	font-weight: 900;
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+#addToDo:hover {
+	opacity: 0.8;
+}
+
+#addToDo:active {
+	opacity: 0.6; 
+}
+
+li {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--pink);
+}
+
+.container {
+    flex: 1 1 0%;
+	max-width: 800px;
+	/* width: 100%; */
+	margin: 0 auto;
+}
