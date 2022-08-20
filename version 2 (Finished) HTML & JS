@@ -36,7 +36,7 @@
             li.style.textDecoration = "line-through";
         })
 
-        // put line through list item when clicked
+        // Remove line through list item when double clicked
         li.addEventListener('dblclick', function(){
             li.style.textDecoration = "none";
         })
